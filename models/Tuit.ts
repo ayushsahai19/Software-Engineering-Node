@@ -1,4 +1,4 @@
-import User from "../users/User";
+import User from "./User";
 
 export default interface Tuit {
     tuit: string,

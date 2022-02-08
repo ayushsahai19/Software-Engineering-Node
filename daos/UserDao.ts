@@ -1,5 +1,5 @@
-import UserModel from "../mongoose/users/UserModel";
-import User from "../models/users/User";
+import UserModel from "../mongoose/UserModel";
+import User from "../models/User";
 import UserDaoI from "../interfaces/UserDaoI";
 
 /**

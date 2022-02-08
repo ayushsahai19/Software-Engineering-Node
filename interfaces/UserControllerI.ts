@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import User from "../models/users/User";
+import User from "../models/User";
 
 export default interface UserControllerI {
     findAllUsers (req: Request, res: Response): void;
