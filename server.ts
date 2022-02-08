@@ -11,7 +11,7 @@ import mongoose from "mongoose";
 // connect to the database
 const DB_USERNAME = process.env.DB_USERNAME;
 const DB_PASSWORD = process.env.DB_PASSWORD;
-const connectionString = `mongodb+srv://ayushsahai96:Toppergrm1.@softwareengg.bmje5.mongodb.net/tuiter?retryWrites=true&w=majority`;
+const connectionString = `mongodb+srv://{username}:{password}.@softwareengg.bmje5.mongodb.net/tuiter?retryWrites=true&w=majority`;
 mongoose.connect(connectionString);
 
 // create RESTful Web service API
