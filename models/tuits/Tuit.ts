@@ -1,5 +1,9 @@
+/**
+ * @file Tuit data model
+ */
 import User from "../users/User";
 import Stats from "./Stats";
+
 
 export default interface Tuit {
     tuit: string,

@@ -1,3 +1,6 @@
+/**
+ * @file Implements the interface that the user DAO has to implement
+ */
 import User from "../models/users/User";
 
 export default interface UserDaoI {

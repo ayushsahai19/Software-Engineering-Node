@@ -1,3 +1,6 @@
+/**
+ * @file implements the interface for Message controller
+ */
 import {Request, Response} from "express";
 
 export default interface MessageControllerI {

@@ -1,3 +1,6 @@
+/**
+ * @file Account Type data model
+ */
 enum AccountType {
     Personal = "PERSONAL",
     Academic = "ACADEMIC",

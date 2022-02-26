@@ -1,5 +1,5 @@
 /**
- * @file Implements DAO managing data storage of messages. Uses mongoose BookmarkModel
+ * @file Implements DAO managing data storage of messages. Uses mongoose Message
  * to integrate with MongoDB
  */
  import MessageDaoI from "../interfaces/MessageDaoI";
@@ -7,9 +7,8 @@
  import MessageModel from "../mongoose/messages/MessageModel";
  
  /**
-  * @class MessageDao Implements Data Access Object managing data storage
-  * of bookmarks
-  * @property {MessageDao} messageDao Private single instance of BookmarkDao
+  * @class MessageDao Implements DAO managing of messages
+  * @property {MessageDao} messageDao single instance of Message Dao
   */
  export default class MessageDao implements MessageDaoI {
      public static messageDao: MessageDao | null = null
@@ -27,11 +26,10 @@
  
      
      /**
-      * Creates a delete instance in the database
+      * Delete instance in the database
       * @param {string} sentFrom senders primary key
       * @param {string} sentTo receivers primary key
-      * @returns Promise To be notified when messages is deleted in
-      * the database
+      * @returns Promise To be notified when messages is deleted
       */
      deleteMessage = async (sentTo: string, sentFrom: string): Promise<any> =>
          MessageModel.deleteOne({sentTo: sentTo, sentFrom: sentFrom});
@@ -41,8 +39,7 @@
       * @param {string} sentFrom sending user's primary key
       * @param {string} sentTo receiving user's primary key
       * @param {string} message message to be sent
-      * @returns Promise to be notified when the message is sent in
-      * database
+      * @returns Promise to be notified when the message is sent
       */
      sendMessage = async (sentTo: string, sentFrom: string, message: Message): Promise<Message> =>
          MessageModel.create({sentTo: sentTo, sentFrom: sentFrom, message: message});
@@ -60,7 +57,7 @@
              .exec();
  
      /**
-      * Uses MessageModel to retrieve all messages sent by a user
+      * Uses MessageModel to fetch all messages sent by a user
       * @param {string} uid user's primary key
       * @returns Promise to be notified when messages are fetched
       * from the database

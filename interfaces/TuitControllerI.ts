@@ -1,3 +1,6 @@
+/**
+ * @file implements the interface for Tuit controller
+ */
 import {Request, Response} from "express";
 import Tuit from "../models/tuits/Tuit";
 
