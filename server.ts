@@ -28,7 +28,7 @@ const DB_PASSWORD = process.env.DB_PASSWORD;
 const HOST = "cluster0.m8jeh.mongodb.net";
 const DB_NAME = "myFirstDatabase";
 const DB_QUERY = "retryWrites=true&w=majority";
-const connectionString = `mongodb+srv://uid:pass.@softwareengg.bmje5.mongodb.net/tuiter?retryWrites=true&w=majority`;
+const connectionString = `mongodb+srv://ayushsahai96:Toppergrm1.@softwareengg.bmje5.mongodb.net/tuiter?retryWrites=true&w=majority`;
 // connect to the database
 mongoose.connect(connectionString);
 
